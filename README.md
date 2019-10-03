@@ -1,0 +1,1 @@
+# Apache-Content-Security-Policy-Script-Nonce
