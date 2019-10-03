@@ -1,0 +1,13 @@
+Configuration in httpd.conf for our project is:
+
+
+LoadModule csp_module	     modules/mod_csp.so
+LoadModule line_edit_module modules/mod_line_edit.so
+
+SetCSPKey "qwei"
+FilterDeclare cspfilter CONTENT_SET
+FilterProvider cspfilter csp resp=Content-Type $text/
+FilterProvider textedit line-editor resp=Content-Type $text/
+
+FilterChain textedit cspfilter
+
